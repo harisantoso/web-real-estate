@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #111;
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 0 15px;
+  background: white;
+}
+
+header {
+  width: 100%;
+  min-height: 70px;
+  border-bottom: 1px solid #555;
+  overflow: hidden;
+  position: relative;
+}
+
+header .logo {
+  width: 100px;
+  min-height: 70px;
+  border-bottom: 1px solid #555;
+  overflow: hidden;
+  position: relative;
+}
+
+header .logo {
+  float: left;
+  /* masih aneh */
+  line-height: 70px;
+  text-transform: uppercase;
+  text-shadow: 4px 5px 10px #ddd;
+}
+
+header ul {
+  float: right;
+  list-style: none;
+}
+
+header ul li {
+  display: inline-block;
+  line-height: 70px;
+}
+
+header ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  opacity: 0.7;
+  padding: 10px 20px;
+}
+
+header ul li a:hover {
+  font-weight: bold;
+  opacity: 1;
+}
+
+header ul li a.active {
+  background: black;
+  border-radius: 50px;
+  color: white;
+}
+
+header .menu {
+  position: absolute;
+  top: 37px;
+  right: 10px;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  opacity: 0.7;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: none;
+}
+
+/* ------------------------ Section ------------------------ */
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 20px;
+}
+
+section .banner {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .thumb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner .thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.banner .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.banner .text h2 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-shadow: -1px 3px 0 white;
+  font-size: 3em;
+  color: rgb(29, 141, 247);
+}
+
+.banner .text p {
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: rgb(145, 10, 10);
+}
+
+.banner .text input {
+  width: 500px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #0009;
+  color: white;
+  padding: 0 5px;
+}
+
+.banner .text button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.prev,
+.next {
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3em;
+  padding: 0 10px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 1;
+}
+
+.slide-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.slide-nav .nav-dot {
+  background: black;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 10px;
+  line-height: 17px;
+  border: 1px solid crimson;
+  cursor: pointer;
+}
+
+.slide-nav .nav-dot .dot-active {
+  background: crimson;
+}
