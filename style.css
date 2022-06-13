@@ -8,7 +8,7 @@
 
 body {
   min-height: 100vh;
-  background: #111;
+  background: rgb(34, 32, 32);
 }
 
 .container {
@@ -550,4 +550,222 @@ section .banner {
 }
 
 /* footer  */
+footer {
+  width: 100%;
+  max-width: 1230px;
+  background: salmon;
+  margin: auto;
+  color: white;
+}
+
+footer .content {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .content .box {
+  flex: 1;
+  min-width: 300px;
+  margin: 30px 10px;
+}
+
+footer .content .box h2 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+footer .content .box p {
+  opacity: 0.5;
+  margin: 15px 0;
+}
+
+footer .content .box h3 {
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+
+footer .row {
+  border-top: 1px solid #555;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+footer .row p {
+  flex: 1;
+  min-width: 470px;
+}
+
+footer .row p span {
+  color: rgb(20, 220, 103);
+}
+
+footer .row .social {
+  flex: 1;
+  min-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+footer .row .social a {
+  text-decoration: none;
+  color: white;
+  padding: 0;
+}
+
+footer .row .social a:hover {
+  font-weight: 900;
+  color: rgb(20, 220, 103);
+}
+
 /* register / login */
+.login-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(130deg, rgb(155, 1, 155), rgb(1, 118, 185));
+  z-index: 99;
+  clip-path: circle(0 at 50% 50%);
+  transition: 0.5s ease-in-out;
+}
+
+#btn-close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 2em;
+  color: orange;
+  cursor: pointer;
+}
+
+.login-box {
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0 20px;
+  box-shadow: 0 0 20px #000;
+}
+
+.login-box h2 {
+  font-size: 3em;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.login-box label {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  background: #eee;
+}
+
+.login-box input {
+  width: 210px;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #eee;
+}
+
+.login-box i {
+  width: 40px;
+  text-align: center;
+}
+
+.login-box .check {
+  background: white;
+  height: 15px;
+  font-size: 12px;
+}
+
+.login-box [type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  transform: translate(3px);
+}
+
+.login-box button {
+  width: 100%;
+  height: 40px;
+  background: crimson;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.login-box p {
+  text-align: center;
+  margin: 5px 0;
+  color: #555;
+}
+
+.login-box a {
+  text-decoration: none;
+  color: crimson;
+  display: inline-block;
+}
+
+.login-box .btn {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.login-box .btn.btn-gg {
+  background: orange;
+}
+
+.login-box .btn.btn-fb {
+  background: rgb(11, 91, 182);
+}
+
+.hidden {
+  display: none;
+}
+
+.login-box .check span {
+  color: green;
+}
+
+.top-scroll {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #111;
+  text-align: center;
+  line-height: 33px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.top-scroll a {
+  color: white;
+}
